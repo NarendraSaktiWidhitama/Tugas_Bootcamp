@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
-import background from "../assets/Images2.png"
+import background from "../assets/rika.jpg"
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
@@ -54,15 +54,15 @@ function Register() {
     return (
         <div className="flex items-center justify-center">
             <div className="rounded-lg max-w-sm">
-              <div className='h-10 w-338 -ml-130'>
-            <div className="bg-[url('./assets/Images2.png')] h-screen"></div>
+                <div className='h-10 w-348 -ml-130 '>
+            <div className="bg-[url('./assets/rika.jpg')] h-screen"></div>
             </div>
             <div className='pt-24'>
             <div className='bg-white rounded-lg pt-4'>
-                <h1 className="text-3xl font-bold text-center mb-6">Login</h1>
+                <h1 className="text-3xl font-bold text-center mb-6">BUAT AKUN</h1>
                 <form onSubmit={handleSubmit}>
                   <div>
-                    <div className="mb-6">
+                    <div className="mb-6 w-90 mx-auto">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Makanan">
                             Nama
                         </label>
@@ -77,7 +77,7 @@ function Register() {
                             required
                         />
                     </div>
-                    <div className="mb-6">
+                    <div className="mb-6 w-90 mx-auto">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Minuman">
                             Email
                         </label>
@@ -92,7 +92,7 @@ function Register() {
                             required
                         />
                     </div>
-                    <div className="mb-6">
+                    <div className="mb-6 w-90 mx-auto">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="harga">
                             Jurusan
                         </label>
@@ -108,15 +108,15 @@ function Register() {
                         />
                         </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-8'>
+                    <div className='grid grid-cols-2 gap-6'>
                         <button
-                            className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-6"
                             type="submit"
                         >
                             Simpan
                         </button>
-                            <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
-                                <a href="/">kembali</a>
+                            <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none mx-6">
+                                <a href="/Login">kembali</a>
                             </button>
                         </div>
                 </form>

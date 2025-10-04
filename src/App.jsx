@@ -3,7 +3,7 @@ import HomePage from "../src/componen/HomePage"
 import Login from "./componen/Login"
 import Register from "./componen/Register"
 import Editdatasiswa from "../src/Bahan/Editdatasiswa"
-import Dashboard from "../src/Bahan/Dashboard"
+import Dashboard from "./Bahan/Dashboard"
 
 function App() {
 

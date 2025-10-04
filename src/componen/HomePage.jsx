@@ -24,10 +24,25 @@ const HomePage = () => {
       <div id='beranda' className="shadow py-24 px-4 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-yellow-300">Selamat Datang di PPDB</h2>
         <p className='text-2xl font-medium'>SMK Bina Nusantara Semarang merupakan sekolah yang berfokus pada pendidikan dan keterampilan praktis yang berkualitas</p>
-        <p className="text-lg md:text-xl mb-8 pt-8">DAFTAR SMK BINA NUSANTARA SEKARANG JUGA</p>
+        <div className='pt-10'>
+          <div className='bg-gray-100'>
+        <p className="text-lg md:text-xl mb-8 font-bold">Syarat pendaftaran sekolah</p>
+          <p className='font-medium'>-mengisi formulir pendaftaran</p>
+          <p className='font-medium -ml-3'>-foto copy 2 lembar kartu kk</p>
+          <p className='font-medium -ml-9'>-Fotokopi Akta Kelahiran</p>
+          <p className='font-medium -ml-9'>-Nilai rapor semester 1-5</p>
+          <p className='font-medium -ml-9'>-Fotokopi KTP orang tua</p>
+          <p className='font-medium -ml-10'>-Surat keterangan sehat</p>
+          <p className='font-medium ml-20'>-Piagam prestasi (jika ikut jalur prestasi)</p>
+          <p className='font-medium ml-30'>-Pakta integritas / surat pernyataan orang tua</p>
+          </div>
+          </div>
+          <div className='pt-10'>
+          <p className="text-lg md:text-xl mb-8 pt-8 font-bold">DAFTAR SMK BINA NUSANTARA SEKARANG JUGA</p>
         <a href="/Login" className="bg-yellow-200 px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition">
           Daftar Sekarang
         </a>
+      </div>
       </div>
 
       <div id="jadwal" className="max-w-2xl mx-auto py-16 px-4">
