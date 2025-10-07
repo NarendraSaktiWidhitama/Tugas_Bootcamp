@@ -39,7 +39,7 @@ const HomePage = () => {
           </div>
           <div className='pt-10'>
           <p className="text-lg md:text-xl mb-8 pt-8 font-bold">DAFTAR SMK BINA NUSANTARA SEKARANG JUGA</p>
-        <a href="/Login" className="bg-yellow-200 px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition">
+        <a href="/Pilihan" className="bg-yellow-200 px-6 py-3 rounded-md font-semibold hover:bg-yellow-400 transition">
           Daftar Sekarang
         </a>
       </div>

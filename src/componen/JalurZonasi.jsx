@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import background from "../assets/space.jpg";
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import Jalurzonasi from '../Bahan/Jalurzonasi';
 
-function Login() {
+function JalurZonasi() {
     const [formData, setFormData] = useState({
         nama: "",
         email: "",
@@ -32,7 +33,7 @@ function Login() {
             });
 
             setFormData({ nama: "", email: "", jurusan: "" });
-            navigate("/Dashboard");
+            navigate("/zonasi");
         } catch (error) {
             console.error("Error saat menambahkan data:", error);
             Swal.fire({
@@ -120,4 +121,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default JalurZonasi;

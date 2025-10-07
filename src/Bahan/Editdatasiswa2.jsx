@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-function Editdatasiswa() {
+function Editdatasiswa2() {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -43,7 +43,7 @@ function Editdatasiswa() {
         icon: "success",
         confirmButtonColor: "#3085d6",
       });
-      navigate("/Dashboard");
+      navigate("/anfirmasi");
     } catch (err) {
       console.error("Gagal mengupdate data:", err);
       alert("Gagal mengupdate data!");
@@ -102,7 +102,7 @@ function Editdatasiswa() {
               Simpan
             </button>
             <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
-              <a href="/Dashboard">Kembali</a>
+              <a href="/Jalurzonasi">Kembali</a>
             </button>
           </div>
         </form>
@@ -111,4 +111,4 @@ function Editdatasiswa() {
   );
 }
 
-export default Editdatasiswa;
+export default Editdatasiswa2;

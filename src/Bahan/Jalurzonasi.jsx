@@ -4,7 +4,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import Sidnav from "../sidnav/Sidnav";
 
-function Dashboard() {
+function Jalurzonasi() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
@@ -47,7 +47,7 @@ function Dashboard() {
                     });
                 }
             });
-            navigate("/Dashboard");
+            navigate("/zonasi");
             setData(data.filter((item) => item.id !== id));
         } catch (err) {
             console.error("Gagal menghapus data:", err);
@@ -59,8 +59,8 @@ function Dashboard() {
         <>
         <div className="pt-8">
           <Sidnav/>
-        <div className="ml-70 bg-linear-to-r from-yellow-200 to-orange-500 w-260 h-20 rounded-lg">
-            <h1 className="text-3xl font-bold ml-10 pt-4">Jalur Pretasi </h1>
+        <div className="ml-70 bg-linear-to-r from-green-200 to-yellow-500 w-260 h-20 rounded-lg">
+            <h1 className="text-3xl font-bold ml-10 pt-4">Jalur zonasi</h1>
             <div className="-m-8 ml-220">
             <button className="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
                                 <a href="/Tambahdata">+ Tambahdata</a>
@@ -87,7 +87,7 @@ function Dashboard() {
                             <td className="font-medium text-center">{item.jurusan}</td>
                             <div className="grid grid-cols-2 gap-2">
                                 <button
-                                    onClick={() => navigate(`/Edit/${item.id}`)}
+                                    onClick={() => navigate(`/Editdatasiswa1/${item.id}`)}
                                     className="bg-yellow-400 text-white px-3 py-1 rounded-lg hover:bg-yellow-500"
                                 >
                                     edit
@@ -113,4 +113,4 @@ function Dashboard() {
         </>
     );
 }
-export default Dashboard;
+export default Jalurzonasi;

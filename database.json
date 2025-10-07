@@ -1,5 +1,65 @@
 {
-    "menu": [
-        
-    ]
+  "menu": [
+    {
+      "id": "a3cd",
+      "nama": "araara",
+      "email": "yurayurawaafafafaf@gmail.com",
+      "jurusan": "otomotif"
+    },
+    {
+      "id": "5136",
+      "nama": "araara",
+      "email": "yurayurawa@gmail.com",
+      "jurusan": "otomotif",
+      "Jurusan": "Tkj"
+    },
+    {
+      "id": "d2b7",
+      "nama": "Reza kevala",
+      "email": "vantot@gmail.com",
+      "jurusan": "PPLG"
+    },
+    {
+      "id": "fc1f",
+      "nama": "Reza kevala",
+      "email": "vantot@gmail.com",
+      "jurusan": "PPLG"
+    },
+    {
+      "id": "0def",
+      "nama": "Reza yanto",
+      "email": "vantot@gmail.com",
+      "jurusan": "RPL"
+    },
+    {
+      "id": "c3a1",
+      "nama": "Reza kevala",
+      "email": "yurayurawaafafafaf@gmail.com",
+      "jurusan": "otomotif"
+    },
+    {
+      "id": "96c9",
+      "nama": "araara",
+      "email": "vantot@gmail.com",
+      "jurusan": "PPLG"
+    },
+    {
+      "id": "705f",
+      "nama": "araara",
+      "email": "yurayurawaafafafaf@gmail.com",
+      "jurusan": "PPLG"
+    },
+    {
+      "id": "3658",
+      "nama": "Reza yanto",
+      "email": "yurayurawa2222@gmail.com",
+      "jurusan": "plg"
+    },
+    {
+      "id": "5623",
+      "nama": "araara",
+      "email": "yurayurawa@gmail.com",
+      "jurusan": "otomotif"
+    }
+  ]
 }
