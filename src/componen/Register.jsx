@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import background from "../assets/rika.jpg"
+import { useNavigate } from 'react-router-dom';
+import background from "../assets/space.jpg";
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-
 function Register() {
     const [formData, setFormData] = useState({
-            makanan: "",
-            paket: "",
-            harga: "",
-        });
+        nama: "",
+        email: "",
+        jurusan: "",
+    });
 
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
@@ -18,33 +17,28 @@ function Register() {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
         try {
             const response = await axios.post("http://localhost:5000/menu", formData);
-
             console.log("Respon server:", response.data);
+
             Swal.fire({
-                title: "Selamat yah!",
-                icon: "berhasil",
-                draggable: true
+                title: "Selamat!",
+                text: "Data berhasil disimpan!",
+                icon: "success",
             });
 
-            setFormData({
-                nama: "",
-                email: "",
-                jurusan: "",
-            });
-
+            setFormData({ nama: "", email: "", jurusan: "" });
             navigate("/Dashboard");
         } catch (error) {
             console.error("Error saat menambahkan data:", error);
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "Something went wrong!",
-                footer: '<a href="#">Why do I have this issue?</a>'
+                text: "Terjadi kesalahan saat menyimpan data!",
             });
         } finally {
             setLoading(false);
@@ -52,77 +46,71 @@ function Register() {
     };
 
     return (
-        <div className="flex items-center justify-center">
-            <div className="rounded-lg max-w-sm">
-                <div className='h-10 w-348 -ml-130 '>
-            <div className="bg-[url('./assets/rika.jpg')] h-screen"></div>
-            </div>
-            <div className='pt-24'>
-            <div className='bg-white rounded-lg pt-4'>
-                <h1 className="text-3xl font-bold text-center mb-6">BUAT AKUN</h1>
+        <div className="flex items-center justify-center bg-cover bg-center h-screen" style={{ backgroundImage: `url(${background})` }}>
+            <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full">
+                <h1 className="text-3xl font-bold text-center mb-6">buat akun</h1>
                 <form onSubmit={handleSubmit}>
-                  <div>
-                    <div className="mb-6 w-90 mx-auto">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Makanan">
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nama">
                             Nama
                         </label>
                         <input
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="Nama"
+                            id="nama"
                             type="text"
-                            name="Nama"
-                            value={formData.name}
+                            name="nama"
+                            value={formData.nama}
                             onChange={handleChange}
-                            placeholder="Masukan nama anda"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
+                            placeholder="Masukkan nama anda"
                             required
                         />
                     </div>
-                    <div className="mb-6 w-90 mx-auto">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="Minuman">
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                             Email
                         </label>
                         <input
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="Email"
-                            type="Email"
-                            name="Email"
+                            id="email"
+                            type="email"
+                            name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            placeholder="Masukan email anda"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
+                            placeholder="Masukkan email anda"
                             required
                         />
                     </div>
-                    <div className="mb-6 w-90 mx-auto">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="harga">
+                    <div className="mb-6">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="jurusan">
                             Jurusan
                         </label>
                         <input
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="Jurusan"
-                            type="Jurusan"
-                            name="Jurusan"
-                            value={formData.password}
+                            id="jurusan"
+                            type="text"
+                            name="jurusan"
+                            value={formData.jurusan}
                             onChange={handleChange}
-                            placeholder="pilih"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
+                            placeholder="Masukkan jurusan anda"
                             required
                         />
-                        </div>
                     </div>
-                    <div className='grid grid-cols-2 gap-6'>
+                    <div className="grid grid-cols-2 gap-4">
                         <button
-                            className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-6"
                             type="submit"
+                            className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                         >
-                            Simpan
+                            {loading ? "Menyimpan..." : "Simpan"}
                         </button>
-                            <button className="bg-orange-400 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none mx-6">
-                                <a href="/Login">kembali</a>
-                            </button>
-                        </div>
+                        <a
+                            href="/Login"
+                            className="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded text-center"
+                        >
+                            Kembali
+                        </a>
+                    </div>
                 </form>
-                </div>
             </div>
-        </div>
         </div>
     );
 }

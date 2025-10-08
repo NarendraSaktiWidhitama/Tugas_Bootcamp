@@ -11,7 +11,7 @@ const Pilihan = () => {
         </div>
         <div className='pt-50'>
         <a
-        href="/JalurPretasi"
+        href="/Login"
         className="bg-green-400 hover:bg-green-600 text-white font-bold py-7 px-80 -m-10 text-3xl rounded text-center"
         >
             Jalur Pretasi

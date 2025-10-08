@@ -23,7 +23,7 @@ function JalurZonasi() {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post("http://localhost:5000/menu", formData);
+            const response = await axios.post("http://localhost:5000/jalurZonasi", formData);
             console.log("Respon server:", response.data);
 
             Swal.fire({
@@ -111,7 +111,7 @@ function JalurZonasi() {
                         </a>
                     </div>
                     <div className="text-center mt-4">
-                        <a href="/Register" className="text-blue-600 hover:underline">
+                        <a href="/R1" className="text-blue-600 hover:underline">
                             Belum punya akun?
                         </a>
                     </div>

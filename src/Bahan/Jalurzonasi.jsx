@@ -12,7 +12,7 @@ function Jalurzonasi() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/menu");
+                const res = await axios.get("http://localhost:5000/jalurZonasi");
                 setData(res.data);
             } catch (err) {
                 console.error("gagal mengambil data:", err);
@@ -29,7 +29,7 @@ function Jalurzonasi() {
         if (!konfirmasi) return;
 
         try {
-            await axios.delete(`http://localhost:5000/menu/${id}`);
+            await axios.delete(`http://localhost:5000/jalurZonasi/${id}`);
             Swal.fire({
                 title: "Are you sure?",
                 text: "You won't be able to revert this!",
@@ -63,7 +63,7 @@ function Jalurzonasi() {
             <h1 className="text-3xl font-bold ml-10 pt-4">Jalur zonasi</h1>
             <div className="-m-8 ml-220">
             <button className="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
-                                <a href="/Tambahdata">+ Tambahdata</a>
+                                <a href="/Tambahdata1">+ Tambahdata</a>
                             </button>
                             </div>
         </div>

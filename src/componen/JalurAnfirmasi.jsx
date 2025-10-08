@@ -22,7 +22,7 @@ function JalurAnfirmasi() {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post("http://localhost:5000/menu", formData);
+            const response = await axios.post("http://localhost:5000/jalurAfirmasi", formData);
             console.log("Respon server:", response.data);
 
             Swal.fire({
@@ -110,7 +110,7 @@ function JalurAnfirmasi() {
                         </a>
                     </div>
                     <div className="text-center mt-4">
-                        <a href="/Register" className="text-blue-600 hover:underline">
+                        <a href="/R2" className="text-blue-600 hover:underline">
                             Belum punya akun?
                         </a>
                     </div>

@@ -12,7 +12,7 @@ function Jaluranfirmasi() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/menu");
+                const res = await axios.get("http://localhost:5000/jalurAfirmasi");
                 setData(res.data);
             } catch (err) {
                 console.error("gagal mengambil data:", err);
@@ -29,7 +29,7 @@ function Jaluranfirmasi() {
         if (!konfirmasi) return;
 
         try {
-            await axios.delete(`http://localhost:5000/menu/${id}`);
+            await axios.delete(`http://localhost:5000/jalurAfirmasi/${id}`);
             Swal.fire({
                 title: "Are you sure?",
                 text: "You won't be able to revert this!",
@@ -47,7 +47,7 @@ function Jaluranfirmasi() {
                     });
                 }
             });
-            navigate("/Jaluranfirmasi");
+            navigate("/anfirmasi");
             setData(data.filter((item) => item.id !== id));
         } catch (err) {
             console.error("Gagal menghapus data:", err);
@@ -63,7 +63,7 @@ function Jaluranfirmasi() {
             <h1 className="text-3xl font-bold ml-10 pt-4">Jalur anfirmasi</h1>
             <div className="-m-8 ml-220">
             <button className="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
-                                <a href="/Tambahdata">+ Tambahdata</a>
+                                <a href="/Tambahdata2">+ Tambahdata</a>
                             </button>
                             </div>
         </div>

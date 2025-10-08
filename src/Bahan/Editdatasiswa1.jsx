@@ -17,7 +17,7 @@ function Editdatasiswa1() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/menu/${id}`);
+        const res = await axios.get(`http://localhost:5000/jalurZonasi/${id}`);
         setFormData(res.data);
       } catch (err) {
         console.error("Gagal mengambil data:", err);
@@ -37,7 +37,7 @@ function Editdatasiswa1() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/menu/${id}`, formData);
+      await axios.put(`http://localhost:5000/jalurZonasi/${id}`, formData);
       Swal.fire({
         title: "Berhasil disimpan!",
         icon: "success",

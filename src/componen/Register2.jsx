@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import background from "../assets/bg2.jpg";
+import background from "../assets/space.jpg";
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-function Tambahdata() {
+function Register2() {
     const [formData, setFormData] = useState({
         nama: "",
         email: "",
@@ -22,7 +22,7 @@ function Tambahdata() {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post("http://localhost:5000/menu", formData);
+            const response = await axios.post("http://localhost:5000/jalurAfirmasi", formData);
             console.log("Respon server:", response.data);
 
             Swal.fire({
@@ -32,7 +32,7 @@ function Tambahdata() {
             });
 
             setFormData({ nama: "", email: "", jurusan: "" });
-            navigate("/Dashboard");
+            navigate("/anfirmasi");
         } catch (error) {
             console.error("Error saat menambahkan data:", error);
             Swal.fire({
@@ -48,7 +48,7 @@ function Tambahdata() {
     return (
         <div className="flex items-center justify-center bg-cover bg-center h-screen" style={{ backgroundImage: `url(${background})` }}>
             <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full">
-                <h1 className="text-3xl font-bold text-center mb-6">tambah data jalur pretasi</h1>
+                <h1 className="text-3xl font-bold text-center mb-6">buat akun</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nama">
@@ -103,7 +103,7 @@ function Tambahdata() {
                             {loading ? "Menyimpan..." : "Simpan"}
                         </button>
                         <a
-                            href="/Dashboard"
+                            href="/JalurAnfirmasi"
                             className="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded text-center"
                         >
                             Kembali
@@ -115,4 +115,4 @@ function Tambahdata() {
     );
 }
 
-export default Tambahdata;
+export default Register2;

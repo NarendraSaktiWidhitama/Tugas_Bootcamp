@@ -10,56 +10,83 @@
       "id": "5136",
       "nama": "araara",
       "email": "yurayurawa@gmail.com",
-      "jurusan": "otomotif",
-      "Jurusan": "Tkj"
+      "jurusan": "tkj"
     },
     {
-      "id": "d2b7",
+      "id": "f026",
       "nama": "Reza kevala",
-      "email": "vantot@gmail.com",
+      "email": "yurayurawaafafafaf@gmail.com",
       "jurusan": "PPLG"
     },
     {
-      "id": "fc1f",
+      "id": "c235",
       "nama": "Reza kevala",
-      "email": "vantot@gmail.com",
-      "jurusan": "PPLG"
+      "email": "yurayurawaafafafaf@gmail.com",
+      "jurusan": "sipil"
     },
     {
-      "id": "0def",
-      "nama": "Reza yanto",
+      "id": "c65f",
+      "nama": "Reza kevala",
+      "email": "yurayurawa2222@gmail.com",
+      "jurusan": "otomotif"
+    },
+    {
+      "id": "61d4",
+      "nama": "Reza kevala",
       "email": "vantot@gmail.com",
       "jurusan": "RPL"
+    }
+  ],
+  "jalurZonasi": [
+    {
+      "id": "1521",
+      "nama": "araara",
+      "email": "yurayurawa2222@gmail.com",
+      "jurusan": "pplg"
     },
     {
-      "id": "c3a1",
+      "id": "59ab",
       "nama": "Reza kevala",
       "email": "yurayurawaafafafaf@gmail.com",
+      "jurusan": "WKWKWKW"
+    },
+    {
+      "id": "a79a",
+      "nama": "Reza kevala",
+      "email": "vantot@gmail.com",
       "jurusan": "otomotif"
     },
     {
-      "id": "96c9",
-      "nama": "araara",
+      "id": "cdef",
+      "nama": "Reza kevala",
+      "email": "yurayurawaafafafaf@gmail.com",
+      "jurusan": "plg"
+    }
+  ],
+  "jalurAfirmasi": [
+    {
+      "id": "768c",
+      "nama": "Reza yanto",
       "email": "vantot@gmail.com",
       "jurusan": "PPLG"
     },
     {
-      "id": "705f",
-      "nama": "araara",
-      "email": "yurayurawaafafafaf@gmail.com",
+      "id": "e16f",
+      "nama": "Reza yanto",
+      "email": "yurayurawa2222@gmail.com",
+      "jurusan": "DKV"
+    },
+    {
+      "id": "77b9",
+      "nama": "Reza kevala",
+      "email": "yurayurawa2222@gmail.com",
       "jurusan": "PPLG"
     },
     {
-      "id": "3658",
+      "id": "6eb6",
       "nama": "Reza yanto",
-      "email": "yurayurawa2222@gmail.com",
-      "jurusan": "plg"
-    },
-    {
-      "id": "5623",
-      "nama": "araara",
-      "email": "yurayurawa@gmail.com",
-      "jurusan": "otomotif"
+      "email": "vantot@gmail.com",
+      "jurusan": "DKV"
     }
   ]
 }
